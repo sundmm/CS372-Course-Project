@@ -1,0 +1,70 @@
+.header 
+{
+
+text-align: center;
+	
+font-size: 3em;
+	
+text-decoration: underline;
+
+}
+
+aside
+{
+    
+display: inline-block;
+    
+float: right;
+    
+clear: left;
+    
+text-align: right;
+    
+position: fixed;
+    
+top: 10px;
+	
+right: 10px;
+
+
+}
+
+
+.table 
+{
+    
+display: flex;
+	  
+margin-left: auto; 
+	
+margin-right: auto;
+	
+width: 100%;
+	
+text-align: left;
+	
+justify-content: center;
+
+}
+
+
+tr.even 
+{
+	background-color: #efefef;
+
+}
+
+
+tr:hover 
+{
+	
+background-color: #c3e6e5;
+
+}
+
+.signup 
+{
+    
+text-align: center;
+
+}
