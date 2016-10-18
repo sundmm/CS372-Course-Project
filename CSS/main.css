@@ -1,30 +1,30 @@
 .header 
 {
 
-text-align: center;
+	text-align: center;
 	
-font-size: 3em;
+	font-size: 3em;
 	
-text-decoration: underline;
+	text-decoration: underline;
 
 }
 
 aside
 {
-    
-display: inline-block;
-    
-float: right;
-    
-clear: left;
-    
-text-align: right;
-    
-position: fixed;
-    
-top: 10px;
+
+	display: inline-block;
+
+	float: right;
+
+	clear: left;
+
+	text-align: right;
+
+	position: fixed;
+
+	top: 10px;
 	
-right: 10px;
+	right: 10px;
 
 
 }
@@ -32,18 +32,18 @@ right: 10px;
 
 .table 
 {
-    
-display: flex;
-	  
-margin-left: auto; 
+
+	display: flex;
+
+	margin-left: auto; 
 	
-margin-right: auto;
+	margin-right: auto;
 	
-width: 100%;
+	width: 100%;
 	
-text-align: left;
+	text-align: left;
 	
-justify-content: center;
+	justify-content: center;
 
 }
 
@@ -58,13 +58,23 @@ tr.even
 tr:hover 
 {
 	
-background-color: #c3e6e5;
+	background-color: #c3e6e5;
 
 }
 
 .signup 
 {
-    
-text-align: center;
 
+	text-align: center;
+
+}
+
+.post-odd {
+	padding: 10px;
+	background: #ceceee;
+}
+
+.post-even {
+	padding: 10px;
+	background: #dfdfff;
 }
