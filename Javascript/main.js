@@ -1,8 +1,7 @@
 function validateSignup()
 
 {
-
-	if (document.forms.signup.name.value == "")
+	if (document.forms.signup.name.value.trim() == "")
 
 	{
 
@@ -12,7 +11,7 @@ function validateSignup()
 
 	}
 
-	else if (!document.forms.signup.email.value.match(/.+@ipfw.edu$/) && !document.forms.signup.email.value.match(/.+@students.ipfw.edu$/) )
+	else if (!document.forms.signup.email.value.trim().match(/.+@ipfw.edu$/) && !document.forms.signup.email.value.trim().match(/.+@students.ipfw.edu$/) )
 
 	{
 
@@ -22,7 +21,7 @@ function validateSignup()
 
 	}
 
-	else if (document.forms.signup.password1.value == "")
+	else if (document.forms.signup.password1.value.trim() == "")
 
 	{
 
@@ -32,7 +31,7 @@ function validateSignup()
 
 	}
 
-	else if (document.forms.signup.password1.value != document.forms.signup.password2.value)
+	else if (document.forms.signup.password1.value.trim() != document.forms.signup.password2.value.trim())
 
 	{
 
@@ -42,7 +41,6 @@ function validateSignup()
 
 	}
 
-
 	return true;
 
 }
@@ -51,7 +49,7 @@ function validateCreateThread()
 
 {
 	
-	if (document.forms.createthread.thread_subject.value == "")
+	if (document.forms.createthread.thread_subject.value.trim() == "")
 		
 	{
 		

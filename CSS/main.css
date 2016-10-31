@@ -5,8 +5,9 @@
 	
 	font-size: 3em;
 	
-	text-decoration: underline;
+/*	text-decoration: underline;*/
 
+/*	padding: 1em;*/
 }
 
 aside
@@ -26,7 +27,9 @@ aside
 	
 	right: 10px;
 
-
+	padding: 1em;
+	
+	background-color: darkgrey;
 }
 
 
@@ -47,8 +50,19 @@ aside
 
 }
 
+.container{
+	margin: 1em;
+	padding: 1em;
+	
+/*	width: 30em;*/
+	max-width: 30em;
+/*	min-width: 100px;*/
+	
+	background-color: lightgrey;
+	border-radius: 20px;
+}
 
-tr.even 
+tr:nth-child(even) 
 {
 	background-color: #efefef;
 
@@ -62,12 +76,12 @@ tr:hover
 
 }
 
-.signup 
+form#signup
 {
-
-	text-align: center;
+/*	text-align: center;*/
 
 }
+
 
 .post-odd {
 	padding: 10px;
