@@ -60,6 +60,8 @@ aside
 	
 	background-color: lightgrey;
 	border-radius: 20px;
+
+	margin: auto;
 }
 
 tr:nth-child(even) 
@@ -91,4 +93,22 @@ form#signup
 .post-even {
 	padding: 10px;
 	background: #dfdfff;
+}
+
+img.logo {
+   	display: block;
+    	margin-left: auto;
+   	margin-right: auto 
+}
+
+img.construction{
+	width:600px;
+	height:399px;
+   	display: block;
+    	margin-left: auto;
+    	margin-right: auto; 
+}
+
+form#createthread{
+	text-align: center;
 }
