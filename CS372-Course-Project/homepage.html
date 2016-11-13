@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="CSS/main.css">
+		<title>
+			IPFW Course Forum
+		</title>
+	</head>
+
+	<body>
+		<aside>
+			Email: <input name="email" type="text">
+			<br><br>
+			Password: <input name="password" type="password"> 
+			<br><br>
+			<input type="submit" value="Login">
+			<br><br>
+			<p>No account? <a href="signup.html">Sign up</a></p>
+		</aside>
+		<section class="container">
+			<div class="header">
+				IPFW Course Forum
+				<br><br>
+			</div>
+			<div class="table">
+				<table border="1" id="courses" >
+					<tr>
+						<th>Course Number</th>
+						<th>Section</th>
+						<th>Course Name</th>
+						<th>Professor</th>
+					</tr>
+					<tr>
+						<tr class = "odd">
+							<td><a href="coursepage.html">CS372</a></td>
+							<td>01</td>
+							<td>Web App Development</td>
+							<td>Dr. Chen</td>
+						</tr>
+						<tr class = "even">
+							<td><a href="construction.html">CS350</a></td>
+							<td>01</td>
+							<td>Programming Language Design</td>
+							<td>Dr. Ng</td>
+						</tr>
+						<tr class = "odd">
+							<td><a href="construction.html">CS368</a></td>
+							<td>01D</td>
+							<td>Human Computer Interaction</td>
+							<td>Dr. Hayes</td>
+						</tr>
+					</table>
+				</div>
+		</section>
+	</body>
+</html>
