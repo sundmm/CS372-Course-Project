@@ -10,80 +10,60 @@
 /*	padding: 1em;*/
 }
 
-aside
-{
-
+aside{
 	display: inline-block;
-
 	float: right;
-
 	clear: left;
-
 	text-align: right;
-
 	position: fixed;
-
 	top: 10px;
-	
 	right: 10px;
-
 	padding: 1em;
-	
 	background-color: darkgrey;
+	border-radius: 20px;
 }
 
 
-.table 
-{
-
+.table {
 	display: flex;
-
 	margin-left: auto; 
-	
 	margin-right: auto;
-	
 	width: 100%;
-	
 	text-align: left;
-	
 	justify-content: center;
-
 }
 
 .container{
-	margin: 1em;
+	margin: auto;
 	padding: 1em;
-	
-/*	width: 30em;*/
-	max-width: 30em;
-/*	min-width: 100px;*/
-	
+	max-width: 45em;
 	background-color: lightgrey;
 	border-radius: 20px;
-
-	margin: auto;
 }
 
-tr:nth-child(even) 
-{
+tr:nth-child(even) {
 	background-color: #efefef;
 
 }
 
 
-tr:hover 
-{
-	
+tr:hover {
 	background-color: #c3e6e5;
 
 }
 
-form#signup
-{
+form#signup{
 /*	text-align: center;*/
 
 }
 
+.odd{
+	background: #ceceee;
+}
+
+.even{
+	background: #dfdfff;	
+}
 
 .post-odd {
 	padding: 10px;
@@ -94,6 +74,7 @@ form#signup
 	padding: 10px;
 	background: #dfdfff;
 }
+
 
 img.logo {
    	display: block;
