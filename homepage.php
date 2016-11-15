@@ -6,7 +6,7 @@
 		$connection = connect_to_db();
 		$header = array('Course Number', 'Section', 'Course Name', 'Professor');
 		$sql = sprintf("SELECT * FROM courses");
-		show_table($sql, $connection, $header, "coursepage.html");
+		show_course_table($sql, $connection, $header, "coursepage.php");
 	}
 
 ?>
