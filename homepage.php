@@ -20,7 +20,7 @@
 			IPFW Course Forum
 		</title>
 	</head>
-	<body>
+	<body background="ipfw-background.jpg">
 		<aside>
 			Email: <input name="email" type="text">
 			<br><br>
@@ -30,7 +30,7 @@
 			<br><br>
 			<p>No account? <a href="signup.html">Sign up</a></p>			
 		</aside>
-		<img class="logo" src="IPFW-logo.jpg" alt="IFPW Logo">
+		<img class="logo" src="ipfw-logo-white.png" alt="IPFW Logo">
 		<section class="container">
 			<div class="header">
 				IPFW Course Forum<br/>

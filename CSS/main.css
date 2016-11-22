@@ -19,8 +19,9 @@ aside{
 	top: 10px;
 	right: 10px;
 	padding: 1em;
-	background-color: darkgrey;
 	border-radius: 20px;
+	background-color: rgba(0,63,135,.8);
+	color: #fff;
 }
 
 
@@ -37,8 +38,9 @@ aside{
 	margin: auto;
 	padding: 1em;
 	max-width: 45em;
-	background-color: lightgrey;
+	background-color: rgba(0,63,135,.8);
 	border-radius: 20px;
+	color: #fff;
 }
 
 tr:nth-child(even) {
@@ -92,4 +94,8 @@ img.construction{
 
 form#createthread{
 	text-align: center;
+}
+
+a {
+	color: #ffd753;
 }
