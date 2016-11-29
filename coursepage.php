@@ -26,7 +26,7 @@
     	<link rel="stylesheet" href="css/bootstrap.min.css">
 		<script type="text/javascript" src="Javascript/main.js">
 		</script>
-		<img class="logo" src="IPFW-logo.jpg" alt="IFPW Logo">
+		<img class="logo" src="ipfw-logo-white.png" alt="IPFW Logo">
 		<title>CS372 Forum</title>
 	</head>
 	<body>

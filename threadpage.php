@@ -27,7 +27,7 @@
 		<link rel="stylesheet" type="text/css" href="CSS/main.css">
 		<script type="text/javascript" src="Javascript/main.js">
 		</script>
-		<img class="logo" src="IPFW-logo.jpg" alt="IFPW Logo">
+		<img class="logo" src="ipfw-logo-white.png" alt="IPFW Logo">
 		<title>Thread: When is the final exam?</title>
 	</head>
 	<body>

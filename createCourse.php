@@ -10,7 +10,7 @@
 	<head>
 		<meta charset="utf-8">
 		<link rel="stylesheet" type="text/css" href="CSS/main.css">
-		<img class="logo" src="IPFW-logo.jpg" alt="IFPW Logo">
+		<img class="logo" src="ipfw-logo-white.png" alt="IPFW Logo">
 		<title>Create new thread</title>
 	</head>
 	<body>

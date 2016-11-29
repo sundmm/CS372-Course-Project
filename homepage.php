@@ -46,7 +46,7 @@
 			IPFW Course Forum
 		</title>
 	</head>
-	<body background="ipfw-background.jpg">
+	<body>
 		<aside>
 			<?php if(login()){ ?>
 				<a href ="logout.php">Log Out</a>

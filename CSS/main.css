@@ -10,6 +10,12 @@
 /*	padding: 1em;*/
 }
 
+
+body {
+	background-color: white;
+	background-image: url("../ipfw-background.jpg");
+}
+
 aside{
 	display: inline-block;
 	float: right;
