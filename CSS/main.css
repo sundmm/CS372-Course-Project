@@ -34,6 +34,12 @@ aside{
 	justify-content: center;
 }
 
+table, th, td {
+	border: 2px solid white;
+	border-collapse: collapse;
+	padding: 2px;
+}
+
 .container{
 	margin: auto;
 	padding: 1em;
@@ -44,13 +50,13 @@ aside{
 }
 
 tr:nth-child(even) {
-	background-color: #efefef;
+	background-color: #0066cc;
 
 }
 
 
 tr:hover {
-	background-color: #c3e6e5;
+	background-color: #0033cc;
 
 }
 
@@ -69,12 +75,12 @@ form#signup{
 
 .post-odd {
 	padding: 10px;
-	background: #ceceee;
+	background: #2e2e84;
 }
 
 .post-even {
 	padding: 10px;
-	background: #dfdfff;
+	background: #3c3caa;
 }
 
 
@@ -97,5 +103,9 @@ form#createthread{
 }
 
 a {
-	color: #ffd753;
+	color: #ffff66;
+}
+
+legend {
+color: #fff !important;
 }
