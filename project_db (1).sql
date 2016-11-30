@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 27, 2016 at 08:54 PM
+-- Generation Time: Nov 30, 2016 at 10:05 PM
 -- Server version: 5.5.50-0ubuntu0.14.04.1
 -- PHP Version: 5.5.9-1ubuntu4.20
 
@@ -67,6 +67,7 @@ CREATE TABLE IF NOT EXISTS `courses` (
 --
 
 INSERT INTO `courses` (`CourseNumber`, `Section`, `CourseName`, `Professor`) VALUES
+('CS350', '01', 'Program Language Design', 'Ng'),
 ('CS372', '01', 'Web App Development', 'Dr. Chen');
 
 -- --------------------------------------------------------
@@ -93,6 +94,7 @@ CREATE TABLE IF NOT EXISTS `thread` (
 --
 
 INSERT INTO `thread` (`CourseNumber`, `Section`, `Date`, `Subject`, `Author`) VALUES
+('CS372', '01', '0000-00-00 00:00:00', 'Color picker help', 'test'),
 ('CS372', '01', '2016-10-20 12:00:00', 'When is the final exam?', 'Steve Jobs');
 
 -- --------------------------------------------------------
@@ -103,18 +105,20 @@ INSERT INTO `thread` (`CourseNumber`, `Section`, `Date`, `Subject`, `Author`) VA
 
 CREATE TABLE IF NOT EXISTS `users` (
   `user_id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(50) NOT NULL,
   `email` varchar(30) NOT NULL,
   `password` varchar(60) NOT NULL,
   PRIMARY KEY (`user_id`),
   UNIQUE KEY `email` (`email`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
 
 --
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`user_id`, `email`, `password`) VALUES
-(1, 'newaj01@students.ipfw.edu', '*012D664AE4A3F39E43D62343F53D32EE6E27D71A');
+INSERT INTO `users` (`user_id`, `name`, `email`, `password`) VALUES
+(2, 'Alex New', 'newaj01@students.ipfw.edu', '*012D664AE4A3F39E43D62343F53D32EE6E27D71A'),
+(3, 'Ben Schmidt', 'schmbl04@students.ipfw.edu', '*012D664AE4A3F39E43D62343F53D32EE6E27D71A');
 
 --
 -- Constraints for dumped tables

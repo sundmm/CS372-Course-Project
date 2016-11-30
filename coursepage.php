@@ -1,6 +1,7 @@
 <?php
 	require_once('db_con.php');
 	require_once('buildTable.php');
+	require_once('userControl.php');
 	
 	function getTable(){
 		$connection = connect_to_db();
@@ -10,7 +11,6 @@
 								$connection->real_escape_string($_GET["course"]),
 								$connection->real_escape_string($_GET["section"]));
 		show_thread_table($sql, $connection, $header, "threadpage.php");
-		//INSERT INTO `thread`(`Course Number`, `Section`, `Date`, `Subject`, `Author`) VALUES ("CS372","01",STR_TO_DATE('10/20/16 12:00 PM','%m/%d/%Y %h:%i %p'),"When is the final exam?","Steve Jobs")
 	}
 
     session_start();
@@ -23,23 +23,25 @@
 	<head>
 		<meta charset="utf-8">
 		<link rel="stylesheet" type="text/css" href="CSS/main.css">
-    	<link rel="stylesheet" href="css/bootstrap.min.css">
-		<script type="text/javascript" src="Javascript/main.js">
-		</script>
-		<img class="logo" src="ipfw-logo-white.png" alt="IPFW Logo">
-		<title>CS372 Forum</title>
+    	<link rel="stylesheet" href="css/bootstrap.min.css"
+		<script type="text/javascript" src="Javascript/main.js"></script>
+		<title>
+			<?php echo($_GET["course"] . " Forum"); ?>
+		</title>
 	</head>
 	<body>
+		<?php addLogin(); ?>
+		<img class="logo" src="ipfw-logo-white.png" alt="IPFW Logo">
 		<section class="container" style="margin-top: 35px">
 			<div class="header page-header page-heading">
-				<h1>CS372 Forum</h1>
-				<h4><a href="createthreadpage.html">Create new thread</a></h4>
+				<?php echo($_GET["course"] . " Forum"); ?><br/>
+				<a href="createthreadpage.php?course=<?php echo($_GET["course"] ."&section=" . $_GET["section"]); ?>">Create new thread</a>
+				<br><br>
 			</div>
-			<div class="table table-inverse">
+			<div class="table">
 				<?php getTable(); ?>
 			</div>
 		</section>
-		
 	</body>
 </html>
 

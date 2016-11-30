@@ -1,6 +1,7 @@
 <?php
 	require_once('db_con.php');
 	require_once('buildTable.php');
+	require_once('userControl.php');
 	
     session_start();
 	
@@ -10,31 +11,6 @@
 		$sql = sprintf("SELECT * FROM courses");
 		show_course_table($sql, $connection, $header, "coursepage.php");
 	}
-	
-	function login(){
-		if(isset($_SESSION["authenticated"])){
-			return true;
-		} else if (isset($_POST["email"]) && isset($_POST["password"])){
-			$connection = connect_to_db();
-	        $sql = sprintf("SELECT 1 FROM users WHERE email= '%s' AND password=PASSWORD('%s')", 
-								$connection->real_escape_string($_POST["email"]),
-								$connection->real_escape_string($_POST["password"]));
-	        echo("$sql");
-        	$result = $connection->query($sql) or die(mysqli_error());     
-	
-	        if ($result->num_rows == 1) {
-	            $_SESSION["authenticated"] = true;
-	            header("Location: homepage.php");
-	            exit;
-	            return true;
-	        }
-	    }
-	    return false;
-	    
-		//INSERT INTO users( user_id, email, PASSWORD ) VALUES (NULL ,  'email', PASSWORD('''))
-	}
-	
-
 ?>
 <!DOCTYPE html>
 
@@ -47,25 +23,12 @@
 		</title>
 	</head>
 	<body>
-		<aside>
-			<?php if(login()){ ?>
-				<a href ="logout.php">Log Out</a>
-				
-			<?php } else { ?>
-				<form action="<?php $_SERVER["PHP_SELF"] ?>" method="post">
-					Email: <input name="email" type="text">
-					<br><br>
-					Password: <input name="password" type="password"> 
-					<br><br>
-					<input type="submit" value="Login">
-					<br><br>
-					<p>No account? <a href="signup.html">Sign up</a></p>
-				</form>
-			<?php } ?>
-		</aside>
+		
+		<?php addLogin(); ?>
 		<img class="logo" src="ipfw-logo-white.png" alt="IPFW Logo">
+		<br/>
 		<section class="container">
-			<div class="header">
+			<div class="header page-header page-heading">
 				IPFW Course Forum<br/>
 				<a href ="createCourse.php">Add Course</a>
 				<br><br>

@@ -8,9 +8,9 @@
         while ($user = $result->fetch_assoc()){
             echo "<tr";
 			if($i % 2 == 0){
-				echo ' class = "even">' . "\n";
+				echo ' class = "post-even">' . "\n";
 			}else{
-				echo ' class = "odd">' . "\n";
+				echo ' class = "post-odd">' . "\n";
 			}
 			
 			echo "<td>".'<a href="' . $refPage . '?course='. array_values($user)[0] . '&section=' . array_values($user)[1] .'">' . implode("</td>\n<td>",$user) . "</td>\n</tr>\n";
@@ -20,19 +20,16 @@
     }
     
     function show_thread_table($sql, $connection, $headers, $refPage){
-    	echo '<table border="2" id="threads">'."\n";
-    	echo '<thead class="thead-inverse">'."\n";
+    	echo '<table border="2">'."\n";
         echo "<tr>\n<th>". implode("</th>\n<th>", $headers)."</th>\n</tr>\n";
-        echo "</thead>\n";
         $result = $connection->query($sql) or die(mysqli_error()); 
-        echo "<tbody>\n";
         $i = 0;
         while ($user = $result->fetch_assoc()){
             echo "<tr";
 			if($i % 2 == 0){
-				echo ' class = "even">' . "\n";
+				echo ' class = "post-even">' . "\n";
 			}else{
-				echo ' class = "odd">' . "\n";
+				echo ' class = "post-odd">' . "\n";
 			}
 			for($q = 0; $q < count($user); ++$q){
 			    if($q != 3){
@@ -44,7 +41,7 @@
 			}
 			$i++;
         }
-        echo "</tbody>\n</table>\n";
+        echo "</table>\n";
     }
     
     function show_comments($sql, $connection){

@@ -1,6 +1,7 @@
 <?php
 	require_once('db_con.php');
 	require_once('buildTable.php');
+	require_once('userControl.php');
 	
 	function getComments(){
 		$connection = connect_to_db();
@@ -25,15 +26,15 @@
 	<head>
 		<meta charset="utf-8">
 		<link rel="stylesheet" type="text/css" href="CSS/main.css">
-		<script type="text/javascript" src="Javascript/main.js">
-		</script>
-		<img class="logo" src="ipfw-logo-white.png" alt="IPFW Logo">
-		<title>Thread: When is the final exam?</title>
+		<script type="text/javascript" src="Javascript/main.js"></script>
+		<title>Thread: <?php echo(str_replace('_', ' ',$_GET["subject"])); ?></title>
 	</head>
 	<body>
+		<?php addLogin(); ?>
+		<img class="logo" src="ipfw-logo-white.png" alt="IPFW Logo">
 		<section class="container">
 			<div class="header">
-				CS372 Thread: When is the final exam?
+				<?php echo($_GET["course"] . " Thread: " .str_replace('_', ' ',$_GET["subject"])); ?>
 				<br/>
 				<br/>
 			</div>

@@ -1,6 +1,18 @@
 <?php
+	require_once('db_con.php');
 
-
+	if(isset($_POST["courseNumber"])){
+		$connection = connect_to_db();
+		
+	    $sql = sprintf("INSERT INTO courses(CourseNumber, Section, CourseName, Professor) VALUES  ('%s' , '%s', '%s', '%s')", 
+		               		$connection->real_escape_string($_POST["courseNumber"]),
+		               		$connection->real_escape_string($_POST["section"]),
+		               		$connection->real_escape_string($_POST["courseName"]),
+		               		$connection->real_escape_string($_POST["professor"]));
+		
+        $result = $connection->query($sql) or die(mysqli_error());   
+	    header("Location: homepage.php");
+	}
     
 
 ?>
@@ -10,17 +22,19 @@
 	<head>
 		<meta charset="utf-8">
 		<link rel="stylesheet" type="text/css" href="CSS/main.css">
-		<img class="logo" src="ipfw-logo-white.png" alt="IPFW Logo">
+		<link rel="stylesheet" href="css/bootstrap.min.css">
 		<title>Create new thread</title>
 	</head>
 	<body>
+		
+		<img class="logo" src="ipfw-logo-white.png" alt="IPFW Logo">
 		<section class ="container">
 			<div class="header">
 				Create Course
 				<br/>
 				<br/>
 			</div>
-			<form action="" id="createthread" method="get" onsubmit="return validateCreateThread();">
+			<form action="" id="createthread" method="POST" onsubmit="return validateCreateThread();">
 				Course Number:
 				<input type="text" name="courseNumber" size="30"/>
 				<br/>
