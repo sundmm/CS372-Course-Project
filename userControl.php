@@ -38,7 +38,7 @@
 		<aside>
 			<?php if(login()){ ?>
 			
-				<a href ="logout.php"); ?>">Log Out</a>
+				<a href ="logout.php">Log Out</a>
 				
 			<?php } else { ?>
 				<form id="login" action="<?php echo("http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]"); ?>" method="post" onsubmit="return validateLogin();">

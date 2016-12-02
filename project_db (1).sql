@@ -117,6 +117,7 @@ CREATE TABLE IF NOT EXISTS `users` (
 --
 
 INSERT INTO `users` (`user_id`, `name`, `email`, `password`) VALUES
+(1, 'a', 'a@students.ipfw.edu', '*667F407DE7C6AD07358FA38DAED7828A72014B4E'),
 (2, 'Alex New', 'newaj01@students.ipfw.edu', '*012D664AE4A3F39E43D62343F53D32EE6E27D71A'),
 (3, 'Ben Schmidt', 'schmbl04@students.ipfw.edu', '*012D664AE4A3F39E43D62343F53D32EE6E27D71A');
 
