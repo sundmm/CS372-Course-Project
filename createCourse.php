@@ -23,6 +23,7 @@
 		<meta charset="utf-8">
 		<link rel="stylesheet" type="text/css" href="CSS/main.css">
 		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<script type="text/javascript" src="Javascript/main.js"></script>
 		<title>Create new thread</title>
 	</head>
 	<body>
@@ -34,7 +35,7 @@
 				<br/>
 				<br/>
 			</div>
-			<form action="" id="createthread" method="POST" onsubmit="return validateCreateThread();">
+			<form action="" id="createcourse" method="POST" onsubmit="return validateCreateCourse();">
 				Course Number:
 				<input type="text" name="courseNumber" size="30"/>
 				<br/>

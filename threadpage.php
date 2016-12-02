@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 	require_once('db_con.php');
 	require_once('buildTable.php');
 	require_once('userControl.php');
@@ -42,7 +42,7 @@
 			<?php getComments(); ?>
 			<!-- End thread posts -->
 			<br/>
-			<form>
+			<form action="" id="createreply" method="POST" onsubmit="return validateReply();">
 				Reply:
 					<br/>
 					<textarea name="thread_reply" rows="4" cols="50"></textarea>

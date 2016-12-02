@@ -18,6 +18,7 @@
 	<head>
 		<meta charset="utf-8">
 		<link rel="stylesheet" type="text/css" href="CSS/main.css">
+		<script type="text/javascript" src="Javascript/main.js"></script>
 		<title>
 			IPFW Course Forum
 		</title>

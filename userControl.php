@@ -41,7 +41,7 @@
 				<a href ="logout.php"); ?>">Log Out</a>
 				
 			<?php } else { ?>
-				<form action="<?php echo("http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]"); ?>" method="post">
+				<form id="login" action="<?php echo("http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]"); ?>" method="post" onsubmit="return validateLogin();">
 					Email: <input name="email" type="text">
 						<br><br>
 					Password: <input name="password" type="password"> 
