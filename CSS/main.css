@@ -55,6 +55,11 @@ table, th, td {
 	color: #fff;
 }
 
+/*Changes font color to black so they are visible*/
+.container input, .container textarea{
+	color: #000;
+}
+
 tr:nth-child(even) {
 	background-color: #0066cc;
 
@@ -105,7 +110,7 @@ img.construction{
 }
 
 form#createthread{
-	text-align: center;
+	/*text-align: center;*/
 }
 
 a {

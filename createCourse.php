@@ -36,19 +36,31 @@
 				<br/>
 			</div>
 			<form action="" id="createcourse" method="POST" onsubmit="return validateCreateCourse();">
-				Course Number:
-				<input type="text" name="courseNumber" size="30"/>
-				<br/>
-				Section:      
-				<input type = "text" name="section" size="30"/>
-				<br/>
-				Course Name:  
-				<input type = "text" name ="courseName" size = "30"/>
-				<br/>
-				Professor:
-				<input type = "text" name = "professor" size = "30"/>
-				<br/>
-				<input type="submit" value="Add Class"/>
+				<div class="form-group">
+					<label>Course Number:
+						<input class = "form-control" type="text" name="courseNumber" size="30"/>
+					</label>
+				</div>
+
+				<div class="form-group">
+					<label>Section:
+						<input class = "form-control" type = "text" name="section" size="30"/>
+					</label>
+				</div>
+
+				<div class="form-group">
+					<label>Course Name:
+						<input class = "form-control" type = "text" name ="courseName" size = "30"/>
+					</label>
+				</div>
+
+				<div class="form-group">
+					<label>Professor:
+						<input class = "form-control" type = "text" name = "professor" size = "30"/>
+					</label>
+				</div>
+
+				<input type="submit" class="btn btn-default" value="Add Class"/>
 			</form>
 		<section>
 	</body>

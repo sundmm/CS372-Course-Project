@@ -45,17 +45,19 @@
 				<br/>
 			</div>
 			<form action="" id="createthread" method="POST" onsubmit="return validateCreateThread();">
-				Subject:
-				<br/>
-				<input type="text" name="thread_subject" size="40"/>
-				<br/>
-				<br/>
-				Message:
-				<br/>
-				<textarea name="thread_content" rows="4" cols="50"></textarea>
-				<br/>
-				<br/>
-				<input type="submit" value="Create Thread"/>
+				<div class="form-group">
+					<label>Subject:
+						<input class="form-control" type="text" name="thread_subject" size="40"/>
+					</label>
+				</div>
+
+				<div class="form-group">
+					<label>Message:
+						<textarea class="form-control" name="thread_content" rows="4" cols="50"></textarea>
+					</label>
+				</div>
+
+				<input type="submit" class="btn btn-default" value="Create Thread"/>
 			</form>
 		<section>
 	</body>
