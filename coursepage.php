@@ -23,7 +23,7 @@
 	<head>
 		<meta charset="utf-8">
 		<link rel="stylesheet" type="text/css" href="CSS/main.css">
-    	<link rel="stylesheet" href="css/bootstrap.min.css"
+    		<link rel="stylesheet" href="css/bootstrap.min.css"
 		<script type="text/javascript" src="Javascript/main.js"></script>
 		<title>
 			<?php echo($_GET["course"] . " Forum"); ?>
@@ -35,7 +35,7 @@
 		<section class="container" style="margin-top: 35px">
 			<div class="header page-header page-heading">
 				<?php echo($_GET["course"] . " Forum"); ?><br/>
-				<a href="createthreadpage.php?course=<?php echo($_GET["course"] ."&section=" . $_GET["section"]); ?>">Create new thread</a>
+				<a href="createthreadpage.php?course=<?php echo($_GET["course"] ."&section=" . $_GET["section"]); ?>">Create New Thread</a>
 				<br><br>
 			</div>
 			<div class="table">

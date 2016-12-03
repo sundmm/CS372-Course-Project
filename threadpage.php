@@ -11,7 +11,6 @@
 								$connection->real_escape_string($_GET["section"]),
 								str_replace('_', ' ',$connection->real_escape_string($_GET["subject"])));
 		show_comments($sql, $connection);
-		//INSERT INTO comments(CourseNumber, CourseSection, ThreadSubject, ThreadDate, PostDate, Comment) VALUES ([value-1],[value-2],[value-3],[value-4],[value-5],[value-6])
 	}	
 	function buildComments(){
 		
@@ -26,6 +25,8 @@
 	<head>
 		<meta charset="utf-8">
 		<link rel="stylesheet" type="text/css" href="CSS/main.css">
+		
+		<link rel="stylesheet" href="css/bootstrap.min.css">
 		<script type="text/javascript" src="Javascript/main.js"></script>
 		<title>Thread: <?php echo(str_replace('_', ' ',$_GET["subject"])); ?></title>
 	</head>

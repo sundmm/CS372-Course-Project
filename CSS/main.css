@@ -1,13 +1,7 @@
 .header 
 {
-
 	text-align: center;
-	
 	font-size: 3em;
-	
-/*	text-decoration: underline;*/
-
-/*	padding: 1em;*/
 }
 
 
@@ -71,11 +65,6 @@ tr:hover {
 
 }
 
-form#signup{
-/*	text-align: center;*/
-
-}
-
 .odd{
 	background: #ceceee;
 }
@@ -109,14 +98,25 @@ img.construction{
     	margin-right: auto; 
 }
 
-form#createthread{
-	/*text-align: center;*/
-}
-
 a {
 	color: #ffff66;
 }
 
 legend {
-color: #fff !important;
+text-align: center;
+font-size: 2em;
+color: #fff;
+}
+
+
+.form-group{
+	
+padding: 1em;
+	
+max-width: 27em;
+	
+text-align: right;
+	
+color: #fff;
+
 }

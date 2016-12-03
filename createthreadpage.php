@@ -33,29 +33,25 @@
 		<link rel="stylesheet" href="css/bootstrap.min.css">
 		<script type="text/javascript" src="Javascript/main.js">
 		</script>
-		<title>Create new thread</title>
+		<title>Create New Thread</title>
 	</head>
 	<body>
 		
 		<img class="logo" src="ipfw-logo-white.png" alt="IPFW Logo">
 		<section class ="container">
 			<div class="header">
-				Create new thread
+				Create New Thread
 				<br/>
 				<br/>
 			</div>
 			<form action="" id="createthread" method="POST" onsubmit="return validateCreateThread();">
-				<div class="form-group">
+				
 					<label>Subject:
 						<input class="form-control" type="text" name="thread_subject" size="40"/>
 					</label>
-				</div>
-
-				<div class="form-group">
-					<label>Message:
+					<label>Message: </label> <br/>
 						<textarea class="form-control" name="thread_content" rows="4" cols="50"></textarea>
-					</label>
-				</div>
+					<br/><br/>
 
 				<input type="submit" class="btn btn-default" value="Create Thread"/>
 			</form>

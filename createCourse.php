@@ -24,44 +24,39 @@
 		<link rel="stylesheet" type="text/css" href="CSS/main.css">
 		<link rel="stylesheet" href="css/bootstrap.min.css">
 		<script type="text/javascript" src="Javascript/main.js"></script>
-		<title>Create new thread</title>
+		<title>Create Course</title>
 	</head>
 	<body>
 		
 		<img class="logo" src="ipfw-logo-white.png" alt="IPFW Logo">
-		<section class ="container">
+		<div class ="container">
 			<div class="header">
 				Create Course
-				<br/>
-				<br/>
 			</div>
+			<br/><br/>
+			<div class="form-group">
 			<form action="" id="createcourse" method="POST" onsubmit="return validateCreateCourse();">
-				<div class="form-group">
+				
 					<label>Course Number:
 						<input class = "form-control" type="text" name="courseNumber" size="30"/>
 					</label>
-				</div>
-
-				<div class="form-group">
+				<br/><br/>
 					<label>Section:
 						<input class = "form-control" type = "text" name="section" size="30"/>
 					</label>
-				</div>
-
-				<div class="form-group">
+				<br/><br/>
 					<label>Course Name:
 						<input class = "form-control" type = "text" name ="courseName" size = "30"/>
 					</label>
-				</div>
-
-				<div class="form-group">
+				<br/><br/>
 					<label>Professor:
 						<input class = "form-control" type = "text" name = "professor" size = "30"/>
 					</label>
-				</div>
+				
 
-				<input type="submit" class="btn btn-default" value="Add Class"/>
+				<input type="submit" class="btn btn-default" value="Add Course"/>
 			</form>
-		<section>
+		</div>
+		</div>
 	</body>
 </html>

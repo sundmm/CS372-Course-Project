@@ -17,8 +17,7 @@
 	<meta charset="utf-8">
 
 	<link rel="stylesheet" type="text/css" href="CSS/main.css">
-		<link rel="stylesheet" href="css/bootstrap.min.css">
-
+	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<script type="text/javascript" src="Javascript/main.js"></script>
 </head>
 	<body>
@@ -30,26 +29,24 @@
 			IPFW Course Forum
 		</div>
 
+		<legend>Sign Up</legend>
+
+		<div class="form-group">
+
 		<form id="signup" action="" method="POST" onsubmit="return validateSignup();">
-			<legend>Sign Up</legend>
-			<div class="form-group">
-				<label>Name: <input name="name" type="text" class="form-control"></label>
-			</div>
-
-			<div class="form-group">
-				<label>Email: <input name="email" type="text" class="form-control"></label>
-			</div>
-
-			<div class="form-group">
-				<label>Password: <input name="password1" type="password" class="form-control"></label>
-			</div>
-
-			<div class="form-group">
-				<label>Password (again): <input name="password2" type="password" class="form-control"></label>
-			</div>
-
+			
+			
+			<label>Name: <input name="name" type="text" class="form-control"></label>
+			<br/><br/>
+			<label>Email: <input name="email" type="text" class="form-control"></label>
+			<br/><br/>
+			<label>Password: <input name="password1" type="password" class="form-control"></label>
+			<br/><br/>
+			<label>Password (again): <input name="password2" type="password" class="form-control"></label>
+			<br/><br/>
 			<input type="submit" value="Sign Up" class="btn btn-default">
 		</form>
+	</div>
 	</div>
 </body>
 </html>
