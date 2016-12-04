@@ -55,9 +55,9 @@
 			}else{
 				echo ' class = "post-odd">' . "\n";
 			}
-			echo "Posted by: " . array_values($user)[4] ."<br/>\n";
-			echo date('M j Y g:i A', strtotime(array_values($user)[5]))."<br/>\n";
-			echo "<blockquote>" . array_values($user)[6] . "</blockquote>\n</div>\n";
+			echo "Posted by: " . array_values($user)[3] ."<br/>\n";
+			echo date('M j Y g:i A', strtotime(array_values($user)[4]))."<br/>\n";
+			echo "<blockquote>" . array_values($user)[5] . "</blockquote>\n</div>\n";
 			
 			$i++;
         }

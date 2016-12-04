@@ -2,6 +2,8 @@
 	require_once('db_con.php');
 	require_once('buildTable.php');
 	require_once('userControl.php');
+	login();
+	session_start();
 	
 	function getTable(){
 		$connection = connect_to_db();
@@ -20,10 +22,11 @@
 <!DOCTYPE html>
 
 <html>
+	
 	<head>
 		<meta charset="utf-8">
 		<link rel="stylesheet" type="text/css" href="CSS/main.css">
-    		<link rel="stylesheet" href="css/bootstrap.min.css"
+    	<link rel="stylesheet" href="css/bootstrap.min.css">
 		<script type="text/javascript" src="Javascript/main.js"></script>
 		<title>
 			<?php echo($_GET["course"] . " Forum"); ?>

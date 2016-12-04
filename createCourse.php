@@ -1,22 +1,26 @@
 <?php
 	require_once('db_con.php');
-
+	require_once('insertIntoDB.php');
+	
+	session_start();
+	
 	if(isset($_POST["courseNumber"])){
-		$connection = connect_to_db();
-		
-	    $sql = sprintf("INSERT INTO courses(CourseNumber, Section, CourseName, Professor) VALUES  ('%s' , '%s', '%s', '%s')", 
-		               		$connection->real_escape_string($_POST["courseNumber"]),
-		               		$connection->real_escape_string($_POST["section"]),
-		               		$connection->real_escape_string($_POST["courseName"]),
-		               		$connection->real_escape_string($_POST["professor"]));
-		
-        $result = $connection->query($sql) or die(mysqli_error());   
-	    header("Location: homepage.php");
+        if(insertCourse($_POST["courseNumber"], $_POST["section"], $_POST["courseName"], $_POST["professor"])){
+	    	header("Location: homepage.php");
+        }else{
+        	
+        }
 	}
-    
+    if(!$_SESSION["authenticated"]){
+    	echo '<script type="text/javascript">'; 
+		echo 'alert("You must be logged in to create a course.");'; 
+		echo 'window.location.href = "homepage.php";';
+		echo '</script>';
+	}else{
 
 ?>
 <!DOCTYPE html>
+
 
 <html>
 	<head>
@@ -24,19 +28,19 @@
 		<link rel="stylesheet" type="text/css" href="CSS/main.css">
 		<link rel="stylesheet" href="css/bootstrap.min.css">
 		<script type="text/javascript" src="Javascript/main.js"></script>
-		<title>Create Course</title>
+		<title>Create new thread</title>
 	</head>
 	<body>
 		
 		<img class="logo" src="ipfw-logo-white.png" alt="IPFW Logo">
-		<div class ="container">
+		<section class ="container">
 			<div class="header">
 				Create Course
+				<br/>
+				<br/>
 			</div>
-			<br/><br/>
 			<div class="form-group">
-			<form action="" id="createcourse" method="POST" onsubmit="return validateCreateCourse();">
-				
+				<form action="" id="createcourse" method="POST" onsubmit="return validateCreateCourse();">
 					<label>Course Number:
 						<input class = "form-control" type="text" name="courseNumber" size="30"/>
 					</label>
@@ -53,10 +57,12 @@
 						<input class = "form-control" type = "text" name = "professor" size = "30"/>
 					</label>
 				
-
+				<br/><br/>
 				<input type="submit" class="btn btn-default" value="Add Course"/>
 			</form>
 		</div>
 		</div>
 	</body>
+
 </html>
+<?php } ?>

@@ -1,7 +1,9 @@
-﻿<?php
+<?php
+	require_once('userControl.php');
+	login();
 	require_once('db_con.php');
 	require_once('buildTable.php');
-	require_once('userControl.php');
+	require_once('insertIntoDB.php');
 	
 	function getComments(){
 		$connection = connect_to_db();
@@ -11,25 +13,32 @@
 								$connection->real_escape_string($_GET["section"]),
 								str_replace('_', ' ',$connection->real_escape_string($_GET["subject"])));
 		show_comments($sql, $connection);
+		//INSERT INTO comments(CourseNumber, CourseSection, ThreadSubject, ThreadDate, PostDate, Comment) VALUES ([value-1],[value-2],[value-3],[value-4],[value-5],[value-6])
 	}	
-	function buildComments(){
+	
+	if(isset($_POST['thread_reply'])){
+		
+		if(insertComment($_GET["course"], $_GET["section"], $_GET["subject"], $_COOKIE["user"], $_POST['thread_reply'])){
+	    	header("Location: threadpage.php?course=" . $_GET["course"] . "&section=" . $_GET["section"] . "&subject=" . $_GET["subject"]);
+        	
+        }
 		
 	}
 	
     session_start();
 ?>
 
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 
 <html>
 	<head>
 		<meta charset="utf-8">
 		<link rel="stylesheet" type="text/css" href="CSS/main.css">
-		
 		<link rel="stylesheet" href="css/bootstrap.min.css">
 		<script type="text/javascript" src="Javascript/main.js"></script>
 		<title>Thread: <?php echo(str_replace('_', ' ',$_GET["subject"])); ?></title>
 	</head>
+
 	<body>
 		<?php addLogin(); ?>
 		<img class="logo" src="ipfw-logo-white.png" alt="IPFW Logo">
@@ -58,4 +67,5 @@
 			</form>
 		</section>
 	</body>
+
 </html>
