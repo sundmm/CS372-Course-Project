@@ -8,6 +8,8 @@
 body {
 	background-color: white;
 	background-image: url("../ipfw-background.jpg");
+	background-size: cover;
+	font-family: "proxima-nova-alt-ext-cond", helvetica, arial, sans-serif;
 }
 
 aside{
@@ -60,7 +62,7 @@ tr:nth-child(even) {
 }
 
 
-tr:hover {
+tr:hover td {
 	background-color: #0033cc;
 
 }
@@ -76,11 +78,29 @@ tr:hover {
 .post-odd {
 	padding: 10px;
 	background: #2e2e84;
+	border-radius: 20px;
+	/* Safari 4-5, Chrome 1-9 */
+	background: -webkit-gradient(radial, center center, 0, center center, 460, from(#3f3fb0), to(#3c3caa));
+	/* Safari 5.1+, Chrome 10+ */
+	background: -webkit-radial-gradient(circle, #3f3fb0, #3c3caa);
+	/* Firefox 3.6+ */
+	background: -moz-radial-gradient(circle, #3f3fb0, #3c3caa);
+	/* IE 10 */
+	background: -ms-radial-gradient(circle, #3f3fb0, #3c3caa);
 }
 
 .post-even {
 	padding: 10px;
 	background: #3c3caa;
+	border-radius: 20px;
+	/* Safari 4-5, Chrome 1-9 */
+	background: -webkit-gradient(radial, center center, 0, center center, 460, from(#003f87), to(#1c1c88));
+	/* Safari 5.1+, Chrome 10+ */
+	background: -webkit-radial-gradient(circle, #003f87, #1c1c88);
+	/* Firefox 3.6+ */
+	background: -moz-radial-gradient(circle, #003f87, #1c1c88);
+	/* IE 10 */
+	background: -ms-radial-gradient(circle, #003f87, #1c1c88);
 }
 
 
