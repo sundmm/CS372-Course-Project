@@ -16,12 +16,13 @@
 
 	<meta charset="utf-8">
 
-	<link rel="stylesheet" type="text/css" href="CSS/main.css">
 	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="CSS/main.css">
 	<script type="text/javascript" src="Javascript/main.js"></script>
 </head>
 	<body>
-	<img class="logo" src="ipfw-logo-white.png" alt="IPFW Logo">
+	<a href="homepage.php"><img class="logo" src="ipfw-logo-white.png" alt="IPFW Logo"></a>
 
 
 	<div class="container">

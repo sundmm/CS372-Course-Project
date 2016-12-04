@@ -22,8 +22,9 @@
 <html>
 	<head>
 		<meta charset="utf-8">
+    	<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
 		<link rel="stylesheet" type="text/css" href="CSS/main.css">
-    		<link rel="stylesheet" href="css/bootstrap.min.css"
 		<script type="text/javascript" src="Javascript/main.js"></script>
 		<title>
 			<?php echo($_GET["course"] . " Forum"); ?>
@@ -31,14 +32,14 @@
 	</head>
 	<body>
 		<?php addLogin(); ?>
-		<img class="logo" src="ipfw-logo-white.png" alt="IPFW Logo">
+		<a href="homepage.php"><img class="logo" src="ipfw-logo-white.png" alt="IPFW Logo"></a>
 		<section class="container" style="margin-top: 35px">
 			<div class="header page-header page-heading">
 				<?php echo($_GET["course"] . " Forum"); ?><br/>
 				<a href="createthreadpage.php?course=<?php echo($_GET["course"] ."&section=" . $_GET["section"]); ?>">Create New Thread</a>
 				<br>
 			</div>
-			<ul class="breadcrumb">
+			<ul class="breadcrumbs">
 				<li><a href="homepage.php">Home</a></li>
 				<li><a><?php echo($_GET["course"]) ?> Forum</a></li>
 			</ul>

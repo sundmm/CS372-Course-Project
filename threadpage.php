@@ -24,21 +24,21 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<link rel="stylesheet" type="text/css" href="CSS/main.css">
-		
 		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="CSS/main.css">
 		<script type="text/javascript" src="Javascript/main.js"></script>
 		<title>Thread: <?php echo(str_replace('_', ' ',$_GET["subject"])); ?></title>
 	</head>
 	<body>
 		<?php addLogin(); ?>
-		<img class="logo" src="ipfw-logo-white.png" alt="IPFW Logo">
+		<a href="homepage.php"><img class="logo" src="ipfw-logo-white.png" alt="IPFW Logo"></a>
 		<section class="container">
 			<div class="header">
 				<?php echo($_GET["course"] . " Thread: " .str_replace('_', ' ',$_GET["subject"])); ?>
 				<br/>
 			</div>
-			<ul class="breadcrumb">
+			<ul class="breadcrumbs">
 				<li><a href="homepage.php">Home</a></li>
 				<li><a href="coursepage.php?course=<?php echo($_GET["course"] ."&section=" . $_GET["section"]); ?>"><?php echo($_GET["course"]) ?> Forum</a></li>
 				<li><a>View Thread</a></li>
@@ -48,13 +48,13 @@
 			<?php getComments(); ?>
 			<!-- End thread posts -->
 			<br/>
-			<form action="" id="createreply" method="POST" onsubmit="return validateReply();">
-				Reply:
+			<form action="" class="form-group" id="createreply" method="POST" onsubmit="return validateReply();">
+				<label>Reply:</label>
 					<br/>
-					<textarea name="thread_reply" rows="4" cols="50"></textarea>
+					<textarea class="form-control" name="thread_reply" rows="4" cols="50"></textarea>
 					<br/>
 					<br/>
-					<input type="submit" value="Submit Reply"/>
+					<button type="submit" class="btn btn-primary" value="Submit Reply"/>Submit Reply</button>
 			</form>
 		</section>
 	</body>

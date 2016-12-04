@@ -29,15 +29,16 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<link rel="stylesheet" type="text/css" href="CSS/main.css">
 		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="CSS/main.css">
 		<script type="text/javascript" src="Javascript/main.js">
 		</script>
 		<title>Create New Thread</title>
 	</head>
 	<body>
 		
-		<img class="logo" src="ipfw-logo-white.png" alt="IPFW Logo">
+		<a href="homepage.php"><img class="logo" src="ipfw-logo-white.png" alt="IPFW Logo"></a>
 		<section class ="container">
 			<div class="header">
 				Create New Thread
@@ -49,6 +50,7 @@
 					<label>Subject:
 						<input class="form-control" type="text" name="thread_subject" size="40"/>
 					</label>
+					<br/>
 					<label>Message: </label> <br/>
 						<textarea class="form-control" name="thread_content" rows="4" cols="50"></textarea>
 					<br/><br/>
