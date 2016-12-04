@@ -15,8 +15,7 @@
 	
 	        if ($result->num_rows == 1) {
 	            $_SESSION["authenticated"] = true;
-	            // header("Location: homepage.php");
-	            // exit;
+	            header("Location: homepage.php");
 	            return true;
 	        }
 	    }
