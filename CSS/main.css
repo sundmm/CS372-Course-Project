@@ -125,6 +125,10 @@ a {
 	color: #ffff66;
 }
 
+a:hover {
+	color: #cccc33;
+}
+
 legend {
 text-align: center;
 font-size: 2em;
@@ -138,7 +142,7 @@ padding: 1em;
 	
 max-width: 27em;
 	
-text-align: right;
+text-align: left;
 	
 color: #fff;
 
@@ -153,7 +157,7 @@ ul{
   list-style: none;
 }
 
-.breadcrumb{
+.breadcrumbs{
   background-image: linear-gradient(to right, rgba(0,11,93,.75), rgba(0,47,119,.75));  
   border-width: 1px;
   border-style: solid;
@@ -164,11 +168,11 @@ ul{
   width: 100%;
 }
 
-.breadcrumb li{
+.breadcrumbs li{
   float: left;
 }
 
-.breadcrumb a{
+.breadcrumbs a{
   padding: .7em 1em .7em 2em;
   float: left;
   text-decoration: none;
@@ -179,17 +183,17 @@ ul{
   background-image: linear-gradient(to right, #3c3caa, #003f87);  
 }
 
-.breadcrumb li:first-child a{
+.breadcrumbs li:first-child a{
   padding-left: 1em;
   border-radius: 5px 0 0 5px;
 }
 
-.breadcrumb a:hover{
+.breadcrumbs a:hover{
   background-image: linear-gradient(to right, #1c1c88, #001f57); 
 }
 
-.breadcrumb a::after,
-.breadcrumb a::before{
+.breadcrumbs a::after,
+.breadcrumbs a::before{
   content: "";
   position: absolute;
   top: 50%;
@@ -200,28 +204,28 @@ ul{
   right: -1em;
 }
 
-.breadcrumb a::after{ 
+.breadcrumbs a::after{ 
   z-index: 2;
   border-left-color: #003f87;  
 }
 
-.breadcrumb a::before{
+.breadcrumbs a::before{
   border-left-color: #ccc;  
   right: -1.1em;
   z-index: 1; 
 }
 
-.breadcrumb a:hover::after{
+.breadcrumbs a:hover::after{
   border-left-color: #001f57;
 }
 
-.breadcrumb .current,
-.breadcrumb .current:hover{
+.breadcrumbs .current,
+.breadcrumbs .current:hover{
   font-weight: bold;
   background: none;
 }
 
-.breadcrumb .current::after,
-.breadcrumb .current::before{
+.breadcrumbs .current::after,
+.breadcrumbs .current::before{
   content: normal;  
 }
