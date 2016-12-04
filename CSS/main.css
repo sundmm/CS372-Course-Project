@@ -8,7 +8,10 @@
 body {
 	background-color: white;
 	background-image: url("../ipfw-background.jpg");
+	background-repeat: no-repeat;
 	background-size: cover;
+	background-position: top left;
+	background-attachment: fixed;
 	font-family: "proxima-nova-alt-ext-cond", helvetica, arial, sans-serif;
 }
 
