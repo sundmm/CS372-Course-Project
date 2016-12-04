@@ -36,8 +36,13 @@
 			<div class="header page-header page-heading">
 				<?php echo($_GET["course"] . " Forum"); ?><br/>
 				<a href="createthreadpage.php?course=<?php echo($_GET["course"] ."&section=" . $_GET["section"]); ?>">Create New Thread</a>
-				<br><br>
+				<br>
 			</div>
+			<ul class="breadcrumb">
+				<li><a href="homepage.php">Home</a></li>
+				<li><a><?php echo($_GET["course"]) ?> Forum</a></li>
+			</ul>
+			<br/>
 			<div class="table">
 				<?php getTable(); ?>
 			</div>

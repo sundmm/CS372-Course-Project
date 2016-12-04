@@ -37,8 +37,13 @@
 			<div class="header">
 				<?php echo($_GET["course"] . " Thread: " .str_replace('_', ' ',$_GET["subject"])); ?>
 				<br/>
-				<br/>
 			</div>
+			<ul class="breadcrumb">
+				<li><a href="homepage.php">Home</a></li>
+				<li><a href="coursepage.php?course=<?php echo($_GET["course"] ."&section=" . $_GET["section"]); ?>"><?php echo($_GET["course"]) ?> Forum</a></li>
+				<li><a>View Thread</a></li>
+			</ul>
+			<br/>
 			<!-- Begin thread posts -->
 			<?php getComments(); ?>
 			<!-- End thread posts -->

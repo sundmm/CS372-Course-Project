@@ -37,8 +37,12 @@
 			<div class="header page-header page-heading">
 				IPFW Course Forum<br/>
 				<a href ="createCourse.php">Add Course</a>
-				<br><br>
+				<br>
 			</div>
+			<ul class="breadcrumb">
+				<li><a>Home</a></li>
+			</ul>
+			<br/>
 			<div class="table">
 				<?php getTable(); ?>
 			</div>
