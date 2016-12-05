@@ -14,9 +14,7 @@
             
         }else if (startsWith($_GET["location"], "homepage")){
 	   	    header("Location: homepage.php");
-            
         }
-	            	
 	}
 	
 	
