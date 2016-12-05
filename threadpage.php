@@ -1,27 +1,31 @@
 <?php
 	require_once('userControl.php');
-	login();
+	$loggedin = login();
 	require_once('db_con.php');
 	require_once('buildTable.php');
 	require_once('insertIntoDB.php');
-	
+	$commentWork = 0;
 	function getComments(){
 		$connection = connect_to_db();
 		
 		$sql = sprintf("SELECT * FROM  comments WHERE CourseNumber =  '%s' AND CourseSection =  '%s' AND ThreadSubject like  '%s%%'", 
 								$connection->real_escape_string($_GET["course"]),
 								$connection->real_escape_string($_GET["section"]),
-								str_replace('_', ' ',$connection->real_escape_string($_GET["subject"])));
+								str_replace("\'", '', str_replace('_', ' ',$connection->real_escape_string($_GET["subject"]))));
+		
 		show_comments($sql, $connection);
-		//INSERT INTO comments(CourseNumber, CourseSection, ThreadSubject, ThreadDate, PostDate, Comment) VALUES ([value-1],[value-2],[value-3],[value-4],[value-5],[value-6])
 	}	
 	
 	if(isset($_POST['thread_reply'])){
-		
-		if(insertComment($_GET["course"], $_GET["section"], $_GET["subject"], $_COOKIE["user"], $_POST['thread_reply'])){
-	    	header("Location: threadpage.php?course=" . $_GET["course"] . "&section=" . $_GET["section"] . "&subject=" . $_GET["subject"]);
+		if(isset($_COOKIE['user'])){
+			if(insertComment($_GET["course"], $_GET["section"], $_GET["subject"], $_COOKIE["user"], $_POST['thread_reply'])){
+	    		header("Location: threadpage.php?course=" . $_GET["course"] . "&section=" . $_GET["section"] . "&subject=" . $_GET["subject"]);
         	
-        }
+        	}
+		}else{
+			$commentWork = -1;
+		}
+		
 		
 	}
 	
@@ -37,6 +41,17 @@
 		<link rel="stylesheet" href="css/bootstrap.min.css">
 		<script type="text/javascript" src="Javascript/main.js"></script>
 		<title>Thread: <?php echo(str_replace('_', ' ',$_GET["subject"])); ?></title>
+		<?php  if($loggedin === -1){
+	        echo '<script type="text/javascript">'; 
+			echo 'alert("Invalid login information.");'; 
+			echo '</script>';
+		} else if ($commentWork === -1){
+		
+	        echo '<script type="text/javascript">'; 
+			echo 'alert("You must be logged in to comment!");'; 
+			echo '</script>';
+		
+		}?>
 	</head>
 
 	<body>

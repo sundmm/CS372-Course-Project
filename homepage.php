@@ -3,7 +3,7 @@
 	// error_reporting(E_ALL);
 	// ini_set('display_errors', TRUE);
 	require_once('userControl.php');
-	login();
+	$loggedin = login();
 	require_once('db_con.php');
 	require_once('buildTable.php');
 	
@@ -26,6 +26,11 @@
 		<title>
 			IPFW Course Forum
 		</title>
+		<?php  if($loggedin === -1){
+	        echo '<script type="text/javascript">'; 
+			echo 'alert("Invalid login information.");'; 
+			echo '</script>';
+		}?>
 	</head>
 	<body>
 		

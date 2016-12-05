@@ -2,7 +2,7 @@
 	require_once('db_con.php');
 	require_once('buildTable.php');
 	require_once('userControl.php');
-	login();
+	$loggedin = login();
 	session_start();
 	
 	function getTable(){
@@ -31,6 +31,11 @@
 		<title>
 			<?php echo($_GET["course"] . " Forum"); ?>
 		</title>
+		<?php  if($loggedin === -1){
+	        echo '<script type="text/javascript">'; 
+			echo 'alert("Invalid login information.");'; 
+			echo '</script>';
+		}?>
 	</head>
 	<body>
 		<?php addLogin(); ?>

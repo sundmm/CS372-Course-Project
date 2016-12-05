@@ -33,7 +33,7 @@
     function insertThread($number, $section, $subject, $user, $comment){
         
         $connection = connect_to_db();
-		date_default_timezone_set('America/Indiana');
+        $subject = str_replace("\'", '', str_replace('_', ' ',$connection->real_escape_string($subject)));
     	if(isset($_SESSION["authenticated"])){
     	    
     	    $sql = sprintf("SELECT 1 FROM thread WHERE CourseNumber = '%s' and Section =  '%s' and Subject =  '%s'",
@@ -62,6 +62,7 @@
     function insertComment($number, $section, $subject, $user, $comment){
         
         $connection = connect_to_db();
+        $subject = str_replace("\'", '', str_replace('_', ' ',$connection->real_escape_string($subject)));
         
     	if(isset($_SESSION["authenticated"])){
     	    

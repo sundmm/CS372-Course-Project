@@ -36,7 +36,7 @@
 			        echo "<td>" . array_values($user)[$q] . "</td>\n" ;
 			    }else{
 			        $subject = str_replace(' ', '_', array_values($user)[3]);
-			        echo "<td>".'<a href="' . $refPage . '?course='. array_values($user)[0] . '&section=' . array_values($user)[1] .'&subject=' . $subject .'">' . array_values($user)[$q] . "</a></td>\n";
+			        echo "<td>".'<a href="' . $refPage . '?course='. array_values($user)[0] . '&section=' . array_values($user)[1] ."&subject='" . $subject . "'" . '">' . array_values($user)[$q] . "</a></td>\n";
 			    }
 			}
 			$i++;
