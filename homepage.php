@@ -21,6 +21,8 @@
 	
 	<head>
 		<meta charset="utf-8">
+    	<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
 		<link rel="stylesheet" type="text/css" href="CSS/main.css">
 		<script type="text/javascript" src="Javascript/main.js"></script>
 		<title>
@@ -35,7 +37,7 @@
 	<body>
 		
 		<?php addLogin(); ?>
-		<img class="logo" src="ipfw-logo-white.png" alt="IPFW Logo">
+		<a href="homepage.php"><img class="logo" src="ipfw-logo-white.png" alt="IPFW Logo"></a>
 		<br/>
 		<section class="container">
 			<div class="header page-header page-heading">
@@ -43,7 +45,7 @@
 				<a href ="createCourse.php">Add Course</a>
 				<br><br>
 			</div>
-			<ul class="breadcrumb">
+			<ul class="breadcrumbs">
 				<li><a>Home</a></li>
 			</ul>
 			<br/>

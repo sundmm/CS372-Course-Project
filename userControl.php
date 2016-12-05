@@ -67,12 +67,12 @@
 				>Log Out</a>
 				
 			<?php } else { ?>
-				<form id="login" action="<?php echo("http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]"); ?>" method="post" onsubmit="return validateLogin();">
-					Email: <input name="email" type="text">
+				<form class="form-group" action="<?php echo"http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]" ?>" method="post">
+					Email: <input name="email" type="email" class="form-control" placeholder="Enter email">
 						<br><br>
-					Password: <input name="password" type="password"> 
+					Password: <input name="password" class="form-control" type="password" placeholder="Password"> 
 					<br><br>
-					<input type="submit" value="Login">
+					<input class="btn btn-primary" type="submit" value="Login">
 					<br><br>
 					<p>No account? <a href="signup.php">Sign up</a></p>
 				</form>
